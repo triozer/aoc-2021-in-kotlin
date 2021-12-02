@@ -10,7 +10,7 @@ fun readInput(name: String) = File("src", "$name.txt").readLines()
 /**
  * Read lines from the given input txt file as a list of int
  */
-fun readInputAsInt(name: String) = readInput(name).map { line -> line.toInt() }
+fun readInputAsInt(name: String) = readInput(name).map { it.toInt() }
 
 /**
  * Converts string to md5 hash.

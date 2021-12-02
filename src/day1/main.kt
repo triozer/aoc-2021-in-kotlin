@@ -3,35 +3,9 @@ package day1
 import readInputAsInt
 
 fun main() {
-    fun part1(input: List<Int>): Int {
-        var x = -1
-        var last = 0
+    fun part1(input: List<Int>) = input.zipWithNext().count { (a, b) -> b > a }
 
-        input.forEach { p ->
-            if (last < p) {
-                x++
-            }
-
-            last = p
-        }
-
-        return x
-    }
-
-    fun part2(input: List<Int>): Int {
-        var x = -1
-        var last = 0
-
-        input.windowed(3).forEach { p ->
-            if (last < p.sum()) {
-                x++
-            }
-
-            last = p.sum()
-        }
-
-        return x
-    }
+    fun part2(input: List<Int>) = part1(input.windowed(3).map { it.sum() })
 
     // test if implementation meets criteria from the description, like:
     val testInput = readInputAsInt("day1/test")
