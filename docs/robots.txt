@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: https://triozer.github.io/aoc-2021-in-kotlin/sitemap.xml
+Sitemap: triozer.github.io/aoc-2021-in-kotlin/sitemap.xml
 Disallow: /ghost/
 Disallow: /p/
 Disallow: /email/
