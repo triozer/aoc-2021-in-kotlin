@@ -1,0 +1,5 @@
+User-agent: *
+Sitemap: aoc-2021-in-kotlin.github.io/sitemap.xml
+Disallow: /ghost/
+Disallow: /p/
+Disallow: /email/

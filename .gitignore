@@ -2,3 +2,4 @@
 .idea
 build
 src/**/input.txt
+.ghost
