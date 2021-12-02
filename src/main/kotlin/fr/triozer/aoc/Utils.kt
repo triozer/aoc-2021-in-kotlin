@@ -1,3 +1,5 @@
+package fr.triozer.aoc
+
 import java.io.File
 import java.math.BigInteger
 import java.security.MessageDigest
@@ -5,12 +7,12 @@ import java.security.MessageDigest
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String) = File("src", "$name.txt").readLines()
+fun readInput(day: Int, name: String) = File("src/main/resources/day$day", "$name.txt").readLines()
 
 /**
  * Read lines from the given input txt file as a list of int
  */
-fun readInputAsInt(name: String) = readInput(name).map { it.toInt() }
+fun readInputAsInt(day: Int, name: String) = readInput(day, name).map { it.toInt() }
 
 /**
  * Converts string to md5 hash.
