@@ -5,7 +5,7 @@
 jQuery(document).ready(function($) {
 
     var config = {
-        'content-api-host': 'triozer.github.io/aoc-2021-in-kotlin',
+        'content-api-host': 'https://triozer.github.io/aoc-2021-in-kotlin',
         'content-api-key': '417fdbe9366ee2350f19b448bd',
 	};
 
