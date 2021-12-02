@@ -14,7 +14,7 @@
     7.  Footer
     8.  Responsive
 
-*/
+*/F
 
 /* ==========================================================================
    0. Normalize
@@ -153,12 +153,11 @@ h1, h2, h3, h4, h5, h6{
     color: #E83030;
     margin: 30px 0;
     font-weight: 300;
-    margin-top: 90px;
     line-height: 1.4;
 }
 
 p{
-    font-size: 22px;
+    font-size: 16px;
     line-height: 29px;
     font-weight: 200;
     margin-bottom: 30px;
@@ -169,7 +168,7 @@ ul, ol{
 }
 
 li{
-    font-size: 22px;
+    font-size: 16px;
     line-height: 29px;
     font-weight: 200;
 }
@@ -616,7 +615,7 @@ header h5:before{
 .main-container{
     min-height: 100vh;
     overflow: hidden;
-}   
+}
 
 .article-container{
     background: #fff;
@@ -644,11 +643,11 @@ header h5:before{
 }
 
 .article-container .post-title{
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 300;
     line-height: 90px;
     text-align: center;
-    margin: 200px auto 50px;
+    margin: 100px auto 50px;
     color: #333333;
     position: relative;
     display: inline-block;
@@ -708,9 +707,9 @@ header h5:before{
     border-radius: 10px 10px 0 0;
     height: 0;
     overflow: hidden;
-    -webkit-transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
-    -moz-transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
-    -o-transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+    -webkit-transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -moz-transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -o-transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
     transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
@@ -1069,11 +1068,11 @@ header h5:before{
     color: #333333;
 }
 
-.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h1, 
-.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h2, 
-.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h3, 
-.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h4, 
-.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h5, 
+.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h1,
+.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h2,
+.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h3,
+.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h4,
+.loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h5,
 .loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content h6{
     color: #333333;
 }
@@ -1185,7 +1184,7 @@ header h5:before{
 }
 
 .share-on p{
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 10px;
     margin-top: 50px;
 }
@@ -1193,7 +1192,7 @@ header h5:before{
 .share-on a{
     color: #AAA391;
     border: none;
-    font-size: 22px;
+    font-size: 16px;
     line-height: 29px;
     margin: 0 5px;
 }
@@ -1209,7 +1208,7 @@ header h5:before{
 
 .author{
     text-align: center;
-    margin-top: 125px;
+    margin-top: 100px;
 }
 
 .author.has-image{
@@ -1308,7 +1307,7 @@ header h5:before{
 }
 
 .author-template .author{
-    margin-bottom: 115px; 
+    margin-bottom: 115px;
     margin-top: 25px;
 }
 
@@ -1394,7 +1393,7 @@ header h5:before{
     background-size: 17px;
 }
 
-.gh-signin .btn:not([disabled]):not(.disabled).active, 
+.gh-signin .btn:not([disabled]):not(.disabled).active,
 .gh-signin .btn:not([disabled]):not(.disabled):active,
 .gh-signin .btn:hover{
     background-image: url('../img/next.svg');
@@ -1645,7 +1644,7 @@ footer .copyright{
         margin-top: 0;
     }
     .page-template .article-container .post-title{
-        padding-bottom: 75px;
+        padding-bottom: 60px;
     }
     footer h3{
         margin-top: 50px;

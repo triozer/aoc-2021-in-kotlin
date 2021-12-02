@@ -11,16 +11,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400%7CRoboto:400,700" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link rel="stylesheet" type="text/css" href="triozer.github.io/aoc-2021-in-kotlin/assets/css/libraries.css?v=75168b2c47" />
-    <link rel="stylesheet" type="text/css" href="triozer.github.io/aoc-2021-in-kotlin/assets/css/style.css?v=75168b2c47" />
+    <link rel="stylesheet" type="text/css" href="triozer.github.io/aoc-2021-in-kotlin/assets/css/libraries.css?v=d8128bf8a9" />
+    <link rel="stylesheet" type="text/css" href="triozer.github.io/aoc-2021-in-kotlin/assets/css/style.css?v=d8128bf8a9" />
 
     <meta name="generator" content="Ghost 4.25" />
     <link rel="alternate" type="application/rss+xml" title="Advent of Code 2021" href="triozer.github.io/aoc-2021-in-kotlin/blog/rss/" />
     
-    <script async src="triozer.github.io/aoc-2021-in-kotlin/public/cards.min.js?v=75168b2c47"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
-    <link rel="stylesheet" type="text/css" href="triozer.github.io/aoc-2021-in-kotlin/public/cards.min.css?v=75168b2c47">
+    <script async src="triozer.github.io/aoc-2021-in-kotlin/public/cards.min.js?v=d8128bf8a9"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+    <link rel="stylesheet" type="text/css" href="triozer.github.io/aoc-2021-in-kotlin/public/cards.min.css?v=d8128bf8a9">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-ycl7dIZ0VJ5535/dzskAMTwOI6OoTNZ3PeD+tfckvYqMmAzaEwQfJHqJTSqcV2iQeJnp5XxnFy5jKotibstp7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body class=" nav-closed">
@@ -112,6 +115,14 @@
             <div class="col-md-12">
                 <div class="footer-content">
                     <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Tags</h3>
+                                    <ul class="tags">
+                                            <li>
+                                                <a href="triozer.github.io/aoc-2021-in-kotlin/tag/stdlib/">stdlib</a>
+                                            </li>
+                                    </ul>
+                                </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -126,11 +137,23 @@
 
     <script type="text/javascript" src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js"></script>
 
-    <script type="text/javascript" src="triozer.github.io/aoc-2021-in-kotlin/assets/js/libraries.js?v=75168b2c47"></script>
+    <script type="text/javascript" src="triozer.github.io/aoc-2021-in-kotlin/assets/js/libraries.js?v=d8128bf8a9"></script>
 
     
-    <script type="text/javascript" src="triozer.github.io/aoc-2021-in-kotlin/assets/js/main.js?v=75168b2c47"></script>
+    <script type="text/javascript" src="triozer.github.io/aoc-2021-in-kotlin/assets/js/main.js?v=d8128bf8a9"></script>
 
-    
+    <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre[class*=language-]').forEach(function (node) {
+            node.classList.add('line-numbers');
+        });
+        Prism.highlightAll();
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-kotlin.min.js" integrity="sha512-YzlEyc7TxW9Kta8OXl3VBagRmI4/05UBEDGg7jCnOQbFMXdK921Ymkr2IW3TBmcHDyOrtH+1XpQ7S//FSXGnbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-YrvgEHAi5/3o2OT+/vh1z19oJXk/Kk0qdVKbjEFl9VRmcLTaWRYzVziZCvoGpJ2TrnV7rB8pnJcz1ioVJjgw2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-pUNGXbOrc+Y3dm5z2ZN7JYQ/2Tq0jppMDOUsN4sQHVJ9AUQpaeERCUfYYBAnaRB9r8d4gtPKMWICNhm3tRr4Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
