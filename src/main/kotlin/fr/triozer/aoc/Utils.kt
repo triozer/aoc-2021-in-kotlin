@@ -17,4 +17,5 @@ fun readInputAsInt(day: Int, name: String) = readInput(day, name).map { it.toInt
 /**
  * Converts string to md5 hash.
  */
-fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
+fun String.md5(): String =
+    BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
