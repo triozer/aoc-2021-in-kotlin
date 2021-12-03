@@ -2,7 +2,7 @@ package fr.triozer.aoc.days
 
 import fr.triozer.aoc.readInput
 
-fun part1(input: List<String>): Int {
+private fun part1(input: List<String>): Int {
     var height = 0
     var depth = 0
 
@@ -18,7 +18,7 @@ fun part1(input: List<String>): Int {
     return height * depth
 }
 
-fun part2(input: List<String>): Int {
+private fun part2(input: List<String>): Int {
     var height = 0
     var depth = 0
     var aim = 0
@@ -38,7 +38,10 @@ fun part2(input: List<String>): Int {
     return height * depth
 }
 
-fun main() {
+/**
+ * Explanation: https://triozer.github.io/aoc-2021-in-kotlin/blog/day-2
+ */
+private fun main() {
     val testInput = readInput(2, "test")
     check(part1(testInput) == 150)
     check(part2(testInput) == 900)
