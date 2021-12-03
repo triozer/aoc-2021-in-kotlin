@@ -15,15 +15,15 @@
     <meta property="og:site_name" content="Advent of Code 2021" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Day 2. Dive!" />
-    <meta property="og:description" content="My attempt to the Advent of Code of 2021." />
+    <meta property="og:description" content="IntroductionToday&#x27;s have a ton of possible solutions! Let&#x27;s watch two ways in this post. The first one will be &quot;the logical&quot; way while the second will be more focused on Kotlin and functional programming. Problem InputNow our submarine can take the following commands forward, down, up. First, we will have" />
     <meta property="og:url" content="https://triozer.github.io/aoc-2021-in-kotlin/blog/day-2/" />
     <meta property="og:image" content="https://triozer.github.io/aoc-2021-in-kotlin/content/images/2021/12/66826401-arbre-de-no-l-fait-de-code-de-programmation-en-langage-ruby.jpg" />
     <meta property="article:published_time" content="2021-12-02T22:59:00.000Z" />
-    <meta property="article:modified_time" content="2021-12-03T01:54:32.000Z" />
+    <meta property="article:modified_time" content="2021-12-03T10:12:08.000Z" />
     <meta property="article:publisher" content="https://www.facebook.com/ghost" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Day 2. Dive!" />
-    <meta name="twitter:description" content="My attempt to the Advent of Code of 2021." />
+    <meta name="twitter:description" content="IntroductionToday&#x27;s have a ton of possible solutions! Let&#x27;s watch two ways in this post. The first one will be &quot;the logical&quot; way while the second will be more focused on Kotlin and functional programming. Problem InputNow our submarine can take the following commands forward, down, up. First, we will have" />
     <meta name="twitter:url" content="https://triozer.github.io/aoc-2021-in-kotlin/blog/day-2/" />
     <meta name="twitter:image" content="https://triozer.github.io/aoc-2021-in-kotlin/content/images/2021/12/66826401-arbre-de-no-l-fait-de-code-de-programmation-en-langage-ruby.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -60,7 +60,8 @@
     "headline": "Day 2. Dive!",
     "url": "https://triozer.github.io/aoc-2021-in-kotlin/blog/day-2/",
     "datePublished": "2021-12-02T22:59:00.000Z",
-    "dateModified": "2021-12-03T01:54:32.000Z",
+    "dateModified": "2021-12-03T10:12:08.000Z",
+    "description": "Introduction\nToday&#x27;s have a ton of possible solutions! Let&#x27;s watch two ways in this post. The\nfirst one will be &quot;the logical&quot; way while the second will be more focused on\nKotlin and functional programming.\n\nProblem Input\nNow our submarine can take the following commands forward, down, up.\n\nFirst, we will have to parse the list of received commands. To do this feel free\nto look at how it is done in the Utils.kt\n[https://github.com/triozer/aoc-2021-in-kotlin/blob/91a492fda83cabb79be2c2c503bb703293",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://triozer.github.io/aoc-2021-in-kotlin/"
@@ -797,7 +798,44 @@
             <div class="row">
                 <div class="col-lg-8 col-sm-10 offset-sm-1 offset-lg-2">
                     <section class="post-content">
-                        <div class="editor-content"></div>
+                        <div class="editor-content"><h2 id="introduction">Introduction</h2><p>Today's have a ton of possible solutions! Let's watch two ways in this post. The first one will be "the logical" way while the second will be more focused on Kotlin and functional programming.</p><h3 id="problem-input">Problem Input</h3><p>Now our submarine can take the following commands <code>forward</code>, <code>down</code>, <code>up</code>.</p><p>First, we will have to parse the list of received commands. To do this feel free to look at how it is done in the <code><a href="https://github.com/triozer/aoc-2021-in-kotlin/blob/7a8f7674983b3c07a8777bd274592a0ef5d1390b/src/main/kotlin/fr/triozer/aoc/Utils.kt#L15"><em><a href="https://github.com/triozer/aoc-2021-in-kotlin/blob/91a492fda83cabb79be2c2c503bb70329365989e/src/main/kotlin/fr/triozer/aoc/Utils.kt#L10">Utils.kt</a></em></a></code> file.</p><h1 id="version-1">Version 1</h1>
+<h2 id="part-1"><a href="https://adventofcode.com/2021/day/1">Part 1</a> </h2><h3 id="problem">Problem</h3><p>Here the code is kinda straight forward. There is no much to explain. Maybe we can talk about array using destructing.</p><p>So, in Kotlin (as in JavaScript, Python...), we can easily destructuring an array / object. Given we have the following array <code>arr = [1, 2, 3]</code>, if we want to access these values, we should use their indexes:</p><pre><code class="language-kt">val arr = [1, 2, 3]
+
+val a = arr[0]
+val b = arr[1]
+val c = arr[2]</code></pre><p>Whereas using destructuration, we can have:</p><pre><code class="language-kt">val (a, b, c) = [1, 2, 3]</code></pre><p>This is exactly what I've done for splitting the command and it's value.</p><h3 id="solution">Solution</h3><pre><code class="language-kt">fun part1(input: List&lt;String&gt;): Int {
+    var height = 0
+    var depth = 0
+
+    for (line in input) {
+        val (command, step) = line.split(" ")
+        when (command) {
+            "forward" -&gt; height += step.toInt()
+            "down" -&gt; depth += step.toInt()
+            "up" -&gt; depth -= step.toInt()
+        }
+    }
+
+    return height * depth
+}</code></pre><h2 id="part-2"><a href="https://adventofcode.com/2021/day/2">Part 2</a></h2><h3 id="problem-1">Problem</h3><p>The second part only add a new variable, but the main "logic" is still the same.</p><h3 id="solution-1">Solution</h3><pre><code class="language-kt">fun part2(input: List&lt;String&gt;): Int {
+    var height = 0
+    var depth = 0
+    var aim = 0
+
+    for (line in input) {
+        val (command, step) = line.split(" ")
+        when (command) {
+            "forward" -&gt; {
+                height += step.toInt()
+                depth += aim * step.toInt()
+            }
+            "down" -&gt; aim += step.toInt()
+            "up" -&gt; aim -= step.toInt()
+        }
+    }
+
+    return height * depth
+}</code></pre><h2 id="conclusion">Conclusion</h2><p>An easy one, still nice to remember about object / array destructuring.</p><p><br />+ 2 ⭐️ !!!</p><h2 id="useful-links">Useful links</h2><ul><li><a href="https://triozer.github.io/aoc-2021-in-kotlin/introduction.html">Introduction</a> – The introduction of this project.</li><li><a href="https://kotlinlang.org/">https://kotlinlang.org</a> – Kotlin official website.</li><li><a href="https://github.com/triozer/aoc-2021-in-kotlin">https://github.com/triozer/aoc-2021-in-kotlin</a> – My solutions and tests for each day.</li></ul><p><br /></p></div>
                     </section>
                             <section class="author ">
 
