@@ -14,6 +14,8 @@ private fun main() {
     check(part1(testInput) == 7)
     check(part2(testInput) == 5)
 
+    println("Checks passed ✅")
+
     val input = readInputAsInt(1, "input")
     println(part1(input))
     println(part2(input))

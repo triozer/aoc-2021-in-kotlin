@@ -49,6 +49,8 @@ private fun main() {
     check(part1(testInput) == 198)
     check(part2(testInput) == 230)
 
+    println("Checks passed ✅")
+
     val input = readInput(3, "input")
     println(part1(input))
     println(part2(input))
