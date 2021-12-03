@@ -1,0 +1,9 @@
+routes:
+  /:
+    data: page.introduction
+    template: page
+
+collections:
+  /blog/:
+    permalink: /blog/{slug}/
+    template: post

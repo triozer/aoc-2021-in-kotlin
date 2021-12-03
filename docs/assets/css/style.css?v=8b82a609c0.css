@@ -14,7 +14,7 @@
     7.  Footer
     8.  Responsive
 
-*/F
+*/
 
 /* ==========================================================================
    0. Normalize
@@ -124,6 +124,14 @@ a:hover{
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: "roboto-mono", "Roboto Mono", sans-serif;
+    color: #E83030;
+    margin: 30px 0;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
 h1{
     font-size: 38px;
 }
@@ -146,14 +154,6 @@ h5{
 
 h6{
     font-size: 14px;
-}
-
-h1, h2, h3, h4, h5, h6{
-    font-family: "roboto-mono", "Roboto Mono", sans-serif;
-    color: #E83030;
-    margin: 30px 0;
-    font-weight: 300;
-    line-height: 1.4;
 }
 
 p{
@@ -621,7 +621,7 @@ header h5:before{
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 41px 0 rgba(200,195,183,0.15);
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     border-color: transparent;
 }
 
@@ -661,7 +661,7 @@ header h5:before{
 }
 
 .page-template .article-container .post-title{
-    padding-bottom: 150px;
+    padding-bottom: 70px;
 }
 
 .article-container .post-date{
@@ -1184,7 +1184,7 @@ header h5:before{
 }
 
 .share-on p{
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 10px;
     margin-top: 50px;
 }
@@ -1192,7 +1192,7 @@ header h5:before{
 .share-on a{
     color: #AAA391;
     border: none;
-    font-size: 16px;
+    font-size: 22px;
     line-height: 29px;
     margin: 0 5px;
 }
@@ -1208,7 +1208,6 @@ header h5:before{
 
 .author{
     text-align: center;
-    margin-top: 100px;
 }
 
 .author.has-image{
@@ -1325,7 +1324,7 @@ header h5:before{
 
 .tags{
     text-align: center;
-    margin: 85px 0;
+    margin: 50px 0;
     padding: 0;
     list-style-type: none;
 }
@@ -1347,18 +1346,18 @@ header h5:before{
     display: none;
 }
 
-.tags li a{
+.tags li .tag{
     color: #B9B2A2;
     font-size: 15px;
     line-height: 20px;
     text-transform: uppercase;
 }
 
-.tags li a:hover{
+.tags li .tag:hover{
     color: #E83030;
 }
 
-.tags li a:before{
+.tags li .tag:before{
     content: '#';
 }
 
@@ -1471,7 +1470,7 @@ footer .copyright{
 
 @media (max-width: 1199px) {
     p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 24px;
     }
     li{
@@ -1644,7 +1643,7 @@ footer .copyright{
         margin-top: 0;
     }
     .page-template .article-container .post-title{
-        padding-bottom: 60px;
+        padding-bottom: 75px;
     }
     footer h3{
         margin-top: 50px;

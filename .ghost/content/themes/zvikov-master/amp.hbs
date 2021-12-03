@@ -1,76 +1,19 @@
 <!DOCTYPE html>
 <html ⚡>
 <head>
+    {{!-- Document Settings --}}
     <meta charset="utf-8">
 
-    <title>Day 2. Dive!</title>
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
 
+    {{!-- Mobile Meta --}}
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-    <link rel="icon" href="../../../favicon.png" type="image/png" />
-    <link rel="canonical" href="../index.html" />
-    <meta name="referrer" content="no-referrer-when-downgrade" />
-    
-    <meta property="og:site_name" content="Advent of Code 2021" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Day 2. Dive!" />
-    <meta property="og:description" content="My attempt to the Advent of Code of 2021." />
-    <meta property="og:url" content="https://triozer.github.io/aoc-2021-in-kotlin/blog/day-2/" />
-    <meta property="og:image" content="https://triozer.github.io/aoc-2021-in-kotlin/content/images/2021/12/66826401-arbre-de-no-l-fait-de-code-de-programmation-en-langage-ruby.jpg" />
-    <meta property="article:published_time" content="2021-12-02T22:59:00.000Z" />
-    <meta property="article:modified_time" content="2021-12-03T01:54:32.000Z" />
-    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Day 2. Dive!" />
-    <meta name="twitter:description" content="My attempt to the Advent of Code of 2021." />
-    <meta name="twitter:url" content="https://triozer.github.io/aoc-2021-in-kotlin/blog/day-2/" />
-    <meta name="twitter:image" content="https://triozer.github.io/aoc-2021-in-kotlin/content/images/2021/12/66826401-arbre-de-no-l-fait-de-code-de-programmation-en-langage-ruby.jpg" />
-    <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="Cédric Boirard" />
-    <meta name="twitter:site" content="@ghost" />
-    <meta name="twitter:creator" content="@triozeroff" />
-    <meta property="og:image:width" content="450" />
-    <meta property="og:image:height" content="450" />
-    
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Advent of Code 2021",
-        "url": "https://triozer.github.io/aoc-2021-in-kotlin/",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://triozer.github.io/aoc-2021-in-kotlin/favicon.png",
-            "width": 60,
-            "height": 60
-        }
-    },
-    "author": {
-        "@type": "Person",
-        "name": "Cédric Boirard",
-        "url": "https://triozer.github.io/aoc-2021-in-kotlin/404/",
-        "sameAs": [
-            "https://github.com/triozer",
-            "https://twitter.com/triozeroff"
-        ]
-    },
-    "headline": "Day 2. Dive!",
-    "url": "https://triozer.github.io/aoc-2021-in-kotlin/blog/day-2/",
-    "datePublished": "2021-12-02T22:59:00.000Z",
-    "dateModified": "2021-12-03T01:54:32.000Z",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://triozer.github.io/aoc-2021-in-kotlin/"
-    }
-}
-    </script>
+    {{amp_ghost_head}}
 
-    <meta name="generator" content="Ghost 4.25" />
-    <link rel="alternate" type="application/rss+xml" title="Advent of Code 2021" href="../../rss/index.html" />
-
+    {{!-- Styles'n'Scripts --}}
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Roboto:400,700" rel="stylesheet">
     <style amp-custom>
         /* ==========================================================================
@@ -733,7 +676,7 @@
             width: 64px;
             color: #5FCCC4;
             font-size: 20px;
-            background-image: url('https://triozer.github.io/aoc-2021-in-kotlin/blog/day-2/img/next.svg');
+            background-image: url('../img/next.svg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: 17px;
@@ -742,7 +685,7 @@
         .gh-signin .btn:not([disabled]):not(.disabled).active, 
         .gh-signin .btn:not([disabled]):not(.disabled):active,
         .gh-signin .btn:hover{
-            background-image: url('https://triozer.github.io/aoc-2021-in-kotlin/blog/day-2/img/next.svg');
+            background-image: url('../img/next.svg');
             box-shadow: none;
         }
 
@@ -756,10 +699,11 @@
 
     </style>
 
+    {{!-- The AMP boilerplate --}}
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-    
+    {{amp_components}}
 
 </head>
 
@@ -769,27 +713,30 @@
             <div class="row">
                 <div class="col-6 ml-auto">
                     <div class="blog-logo">
-                        <a href="../../../introduction/index.html" title="Advent of Code 2021">
-                            Advent of Code 2021
+                        <a href="{{@site.url}}" title="{{@site.title}}">
+                            {{@site.title}}
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    {{#post}}
 
     <main class="content" role="main">
-        <article class="post no-image container article-container" data-id="61a95c7554e62874979e3f11">
+        <article class="{{post_class}} container article-container" data-id="{{comment_id}}">
             <div class="row">
                 <div class="col-md-12 post-cover-container">
-                    <time class="post-date" datetime="2021-12-02">2nd December 2021</time>
-                    <div class="post-cover post-meta ">
+                    <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="Do MMMM YYYY"}}</time>
+                    <div class="post-cover post-meta {{#if feature_image}}has-image{{/if}}">
                         <div class="pagination-number"></div>
-                        <h1 class="post-title col-lg-8 col-sm-10 offset-sm-1 offset-lg-2">Day 2. Dive!</h1>
+                        <h1 class="post-title col-lg-8 col-sm-10 offset-sm-1 offset-lg-2">{{title}}</h1>
                         <div class="author-name text-center">
-                                <a href="https://triozer.github.io/aoc-2021-in-kotlin/404/">Cédric Boirard</a>
+                            {{#primary_author}}
+                                <a href="{{url}}">{{name}}</a>
+                            {{/primary_author}}
                         </div>
-                        <a href="index.html#" class="read-later" data-id="61a95c7554e62874979e3f11"></a>
+                        <a href="#" class="read-later" data-id="{{id}}"></a>
                     </div>
                 </div>
             </div>
@@ -797,48 +744,77 @@
             <div class="row">
                 <div class="col-lg-8 col-sm-10 offset-sm-1 offset-lg-2">
                     <section class="post-content">
-                        <div class="editor-content"></div>
+                        <div class="editor-content">{{amp_content}}</div>
                     </section>
-                            <section class="author ">
+                    {{#if tags}}
+                        <ul class="tags">
+                        {{#foreach tags}}
+                            <li>
+                                <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+                            </li>  
+                        {{/foreach}}
+                        </ul>
+                    {{/if}}
+                    {{#if authors}}
+                        {{#foreach authors}}
+                            <section class="author {{#if profile_image}}has-image{{/if}}">
+                                {{#if profile_image}}
+                                <figure class="author-image">
+                                    <a class="img" href="{{url}}" title="{{name}}"><amp-img src="{{img_url profile_image size="xs"}}" alt="{{name}}" width="80" height="80"></amp-img></a>
+                                </figure>
+                                {{/if}}
 
                                 <div class="author-content">
                                     <h3>
-                                        <a href="https://triozer.github.io/aoc-2021-in-kotlin/404/">Cédric Boirard</a>
+                                        <a href="{{url}}">{{name}}</a>
                                     </h3>
 
-                                        <p>Read <a href='https://triozer.github.io/aoc-2021-in-kotlin/404/'>more posts</a> by this author.</p>
+                                    {{#if bio}}
+                                        <p>{{bio}}</p>
+                                    {{else}}
+                                        <p>{{{t "Read <a href='{url}'>more posts</a> by this author" url=(url)}}}.</p>
+                                    {{/if}}
 
                                     <div class="author-meta">
                                         <span class="social">
-                                            <a href="https://twitter.com/triozeroff" class="twitter" title="@triozeroff" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                                            
+                                            {{#if twitter}}<a href="{{twitter_url}}" class="twitter" title="{{twitter}}" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>{{/if}}
+                                            {{#if facebook}}<a href="{{facebook_url}}" class="facebook" title="{{facebook}}" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>{{/if}}
                                         </span>
-                                        <span class="author-link"><a href="https://github.com/triozer" target="_blank" rel="noopener noreferrer"><i class="fa fa-link" aria-hidden="true"></i> https://github.com/triozer</a></span>
-                                        <span class="author-location"><i class="fa fa-map-marker" aria-hidden="true"></i> Paris, France</span>
+                                        {{#if website}}<span class="author-link"><a href="{{website}}" target="_blank" rel="noopener noreferrer"><i class="fa fa-link" aria-hidden="true"></i> {{website}}</a></span>{{/if}}
+                                        {{#if location}}<span class="author-location"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</span>{{/if}}
                                     </div>
                                 </div>
                             </section>
+                        {{/foreach}}
+                    {{/if}}
                 </div>
             </div>
         </article>
     </main>
+    {{/post}}
     <footer class="site-footer container">
         <div class="row">
             <div class="col-md-12">
                 <div class="footer-content">
+                    {{#get "tags" limit="all"}}
+                        {{#if tags}}
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h3>Tags</h3>
+                                    <h3>{{t "Tags"}}</h3>
                                     <ul class="tags">
+                                        {{#foreach tags}}
                                             <li>
-                                                <a href="https://triozer.github.io/aoc-2021-in-kotlin/404/">stdlib</a>
+                                                <a href="{{url}}">{{name}}</a>
                                             </li>
+                                        {{/foreach}}
                                     </ul>
                                 </div>
                             </div>
+                        {{/if}}
+                    {{/get}}
                     <div class="row">
                         <div class="col-md-12">
-                            <p class="copyright">Copyright &copy; 2021, <a href="../../../introduction/index.html">Advent of Code 2021</a>. All Right Reserved.</p>
+                            <p class="copyright">{{t "Copyright"}} &copy; {{date format="YYYY"}}, <a href="{{@site.url}}">{{@site.title}}</a>. {{t "All Right Reserved"}}.</p>
                         </div>
                     </div>
                 </div>

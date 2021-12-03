@@ -1,0 +1,58 @@
+<div class="swiper-slide" data-history="{{slug}}">
+    <article class="{{post_class}} container article-container" data-id="{{comment_id}}">
+        <div class="row">
+            <div class="col-md-12 post-cover-container">
+                <span class="post-date">🎁 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="Do MMMM YYYY"}}</time></span>
+                <div class="post-cover post-meta {{#if feature_image}}has-image{{/if}}">
+                    <h1 class="post-title col-lg-8 col-sm-10 offset-sm-1 offset-lg-2"><a href="{{url}}">{{title}}</a></h1>
+                    {{#if feature_image}}
+                    <div class="cloned-content">
+                        <div class="img-holder" style="background-image: url({{img_url feature_image}})"></div>
+                        <span class="post-title col-lg-8 col-sm-10 offset-sm-1 offset-lg-2"><a href="{{url}}">{{title}}</a></span>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-sm-10 offset-sm-1 offset-lg-2">
+                <section class="post-content">
+                    <div class="editor-content">{{content}}</div>
+                    <div class="share-on">
+                        <p>{{t "Share on:"}}</p>
+                        <a class="share-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;" title="{{t "Share on Twitter"}}"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.reddit.com/submit?url={{url absolute="true"}}%2F&title={{encode title}}" title="{{t "Share on Reddit"}}"><i class="fab fa-reddit-alien" aria-hidden="true"></i></a>
+                        <a href="mailto:?subject={{encode title}}&amp;body={{url absolute="true"}}" title="{{t "Share by Email"}}"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </section>
+                {{#if tags}}
+                    <ul class="tags">
+                    {{#foreach tags}}
+                        <li><span class="tag tag-{{id}} {{slug}}">{{name}}<span></li>
+                    {{/foreach}}
+                    </ul>
+                {{/if}}
+                {{^is "author"}}
+                    {{#if authors}}
+                        {{#foreach authors}}
+                            <section class="author {{#if profile_image}}has-image{{/if}}">
+                                <div class="author-content">
+                                    <div class="author-meta">
+                                        <span class="social">
+                                            {{#if twitter}}<a href="{{twitter_url}}" class="twitter" title="{{twitter}}" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>{{/if}}
+                                            {{#if facebook}}<a href="{{facebook_url}}" class="facebook" title="{{facebook}}" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>{{/if}}
+                                            <span><i class="fab fa-discord" aria-hidden="true"></i> triozer#4242</span>
+                                        </span>
+                                        {{#if website}}<span class="author-link"><a href="{{website}}" target="_blank" rel="noopener noreferrer"><i class="fa fa-link" aria-hidden="true"></i> {{website}}</a></span>{{/if}}
+                                        {{#if location}}<span class="author-location"><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</span>{{/if}}
+                                    </div>
+                                </div>
+                            </section>
+                        {{/foreach}}
+                    {{/if}}
+                {{/is}}
+            </div>
+        </div>
+    </article>
+</div>

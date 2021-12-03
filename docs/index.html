@@ -11,33 +11,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400%7CRoboto:400,700" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/libraries.css%3Fv=d8128bf8a9.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css%3Fv=d8128bf8a9.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/libraries.css%3Fv=8b82a609c0.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css%3Fv=8b82a609c0.css" />
 
-    <meta name="description" content="My attempt to the Advent of Code of 2021" />
+    <meta name="description" content="My attempt to the Advent of Code of 2021." />
     <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="canonical" href="introduction.html" />
+    <link rel="canonical" href="introduction/index.html" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     
     <meta property="og:site_name" content="Advent of Code 2021" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Advent of Code 2021" />
-    <meta property="og:description" content="My attempt to the Advent of Code of 2021" />
-    <meta property="og:url" content="triozer.github.io/aoc-2021-in-kotlin/" />
-    <meta property="og:image" content="https://static.ghost.org/v4.0.0/images/publication-cover.jpg" />
-    <meta property="article:modified_time" content="2021-12-02T16:08:12.000Z" />
+    <meta property="og:description" content="My attempt to the Advent of Code of 2021." />
+    <meta property="og:url" content="https://triozer.github.io/aoc-2021-in-kotlin/" />
+    <meta property="og:image" content="https://triozer.github.io/aoc-2021-in-kotlin/content/images/2021/12/66826401-arbre-de-no-l-fait-de-code-de-programmation-en-langage-ruby.jpg" />
+    <meta property="article:modified_time" content="2021-12-03T00:45:00.000Z" />
     <meta property="article:publisher" content="https://www.facebook.com/ghost" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Advent of Code 2021" />
-    <meta name="twitter:description" content="My attempt to the Advent of Code of 2021" />
-    <meta name="twitter:url" content="triozer.github.io/aoc-2021-in-kotlin/" />
-    <meta name="twitter:image" content="https://static.ghost.org/v4.0.0/images/publication-cover.jpg" />
+    <meta name="twitter:description" content="My attempt to the Advent of Code of 2021." />
+    <meta name="twitter:url" content="https://triozer.github.io/aoc-2021-in-kotlin/" />
+    <meta name="twitter:image" content="https://triozer.github.io/aoc-2021-in-kotlin/content/images/2021/12/66826401-arbre-de-no-l-fait-de-code-de-programmation-en-langage-ruby.jpg" />
     <meta name="twitter:site" content="@ghost" />
     <meta name="twitter:creator" content="@triozeroff" />
-    <meta property="og:image:width" content="7183" />
-    <meta property="og:image:height" content="2885" />
+    <meta property="og:image:width" content="450" />
+    <meta property="og:image:height" content="450" />
     
     <script type="application/ld+json">
 {
@@ -46,10 +46,10 @@
     "publisher": {
         "@type": "Organization",
         "name": "Advent of Code 2021",
-        "url": "triozer.github.io/aoc-2021-in-kotlin/",
+        "url": "https://triozer.github.io/aoc-2021-in-kotlin/",
         "logo": {
             "@type": "ImageObject",
-            "url": "triozer.github.io/aoc-2021-in-kotlin/favicon.png",
+            "url": "https://triozer.github.io/aoc-2021-in-kotlin/favicon.png",
             "width": 60,
             "height": 60
         }
@@ -63,11 +63,11 @@
         ]
     },
     "headline": "Advent of Code 2021",
-    "url": "triozer.github.io/aoc-2021-in-kotlin/",
-    "dateModified": "2021-12-02T16:08:12.000Z",
+    "url": "https://triozer.github.io/aoc-2021-in-kotlin/",
+    "dateModified": "2021-12-03T00:45:00.000Z",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "triozer.github.io/aoc-2021-in-kotlin/"
+        "@id": "https://triozer.github.io/aoc-2021-in-kotlin/"
     }
 }
     </script>
@@ -75,29 +75,29 @@
     <meta name="generator" content="Ghost 4.25" />
     <link rel="alternate" type="application/rss+xml" title="Advent of Code 2021" href="blog/rss/index.html" />
     
-    <script async src="public/cards.min.js%3Fv=d8128bf8a9"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
-    <link rel="stylesheet" type="text/css" href="public/cards.min.css%3Fv=d8128bf8a9.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-ycl7dIZ0VJ5535/dzskAMTwOI6OoTNZ3PeD+tfckvYqMmAzaEwQfJHqJTSqcV2iQeJnp5XxnFy5jKotibstp7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script async src="public/cards.min.js%3Fv=8b82a609c0"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+    <link rel="stylesheet" type="text/css" href="public/cards.min.css%3Fv=8b82a609c0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-ycl7dIZ0VJ5535/dzskAMTwOI6OoTNZ3PeD+tfckvYqMmAzaEwQfJHqJTSqcV2iQeJnp5XxnFy5jKotibstp7A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 </head>
 <body class="home-template nav-closed">
 
     <div class="main-container">
-    
+
         <header>
     <div class="container">
         <div class="row">
             <div class="col-6 ml-auto">
                 <div class="blog-logo">
-                    <a href="introduction.html" title="Advent of Code 2021">
+                    <a href="introduction/index.html" title="Advent of Code 2021">
                         <span>Advent of Code 2021</span>
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-6 text-right btns">
-                <a href="introduction.html#" class="menu" data-toggle="modal" data-target="#menu">
+                <a href="introduction/index.html#" class="menu" data-toggle="modal" data-target="#menu">
                     <svg width="30" height="22" viewBox="0 0 30 22" xmlns="http://www.w3.org/2000/svg"><path d="M.5 1C.224 1 0 .776 0 .5S.224 0 .5 0h27.874c.276 0 .5.224.5.5s-.224.5-.5.5H.5zm27.874 9c.276 0 .5.224.5.5s-.224.5-.5.5H.5c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h27.874zm0 10c.276 0 .5.224.5.5s-.224.5-.5.5H.5c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h27.874z" fill="#B9B2A2" fill-rule="evenodd"/></svg>
                 </a>
             </div>
@@ -113,13 +113,13 @@
                         <div class="row">
                             <div class="col-6 ml-auto">
                                 <div class="blog-logo">
-                                    <a href="introduction.html" title="Advent of Code 2021">
+                                    <a href="introduction/index.html" title="Advent of Code 2021">
                                         <span>Advent of Code 2021</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6 text-right btns">
-                                <a href="introduction.html#" data-dismiss="modal" aria-label="Close">
+                                <a href="introduction/index.html#" data-dismiss="modal" aria-label="Close">
                                     <svg width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg"><g stroke="#B9B2A2" fill="none" fill-rule="evenodd" stroke-linecap="square"><path d="M21.4473684.55263158L1.17249143 20.8275086M1.5526316.55263158L21.82750857 20.8275086"/></g></svg>
                                 </a>
                             </div>
@@ -132,7 +132,7 @@
                             <div class="col-md-12">
                                 <nav class="nav">
     <ul>
-            <li class="nav-introduction nav-current"><a href="introduction.html" title="Introduction">Introduction</a></li>
+            <li class="nav-introduction"><a href="introduction/index.html" title="Introduction">Introduction</a></li>
             <li class="nav-day-1-sonar-sweep"><a href="blog/day-1/index.html" title="Day 1. Sonar Sweep">Day 1. Sonar Sweep</a></li>
             <li class="nav-day-2-dive"><a href="blog/day-2/index.html" title="Day 2. Dive!">Day 2. Dive!</a></li>
     </ul>
@@ -144,7 +144,7 @@
                 <div class="modal-footer">
                     <ul class="social">
                             <li><a href="https://twitter.com/ghost" class="twitter" title="@ghost" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <a href="triozer.github.io/aoc-2021-in-kotlin/rss" title="RSS Feed" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                        <li><a href="https://triozer.github.io/aoc-2021-in-kotlin/rss" title="RSS Feed" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -157,20 +157,19 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-history="introduction">
-                    <article class="post no-image page container article-container" data-id=61a8b1c8fd83d81ffe3fe797>
+                    <article class="post no-image page container article-container" data-id=61a95be454e62874979e3eff>
                         <div class="row">
                             <div class="col-md-12 post-cover-container">
                                 <time class="post-date" datetime="2021-12-02">December 2nd, 2021</time>
                                 <div class="post-cover post-meta ">
-                                    <div class="pagination-number"></div>
-                                    <h1 class="post-title col-lg-8 col-sm-10 offset-sm-1 offset-lg-2">Introduction</h1>
+                                    <h1 class="post-title col-lg-8 col-sm-10 offset-sm-1 offset-lg-2"><a href="introduction/index.html">Introduction</a></h1>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-8 col-sm-10 offset-sm-1 offset-lg-2">
                                 <section class="post-content">
-                                    <div class="editor-content"><p></p><p>Yesterday signed the return of <code><a href="http://adventofcode.com">Advent of Code</a></code> and for the first time in my life, I will try to solve the puzzles that are proposed every day.</p><p>I want to make it clear that my goal will be to propose a clear and easy to understand solution for each of the exercises. By this I mean that I will not aim for time/memory optimization. At least, not for the versions that I will document the most.</p><p>If I feel like it, I will surely recode an optimal solution.</p><p>Moreover, this year <a href="https://blog.jetbrains.com/kotlin/2021/11/advent-of-code-2021-in-kotlin/">JetBrains offers to process the topics using Kotlin</a>. Great, it's been a long time since I coded in this language!</p><p>All my solutions will be available on this <a href="https://github.com/triozer/aoc-2021-in-kotlin">GitHub repo</a>. I also created a private leaderboard if you want to challenge me : <code>1663489-611b8c95</code>.</p><p>Let's have <code>fun</code> and don't hesitate to reach me on Discord <code>triozer#4242</code>!</p></div>
+                                    <div class="editor-content"><p>Yesterday signed the return of <a href="http://adventofcode.com/"><em>Advent of Code</em></a> and for the first time in my life, I will try to solve the puzzles that are proposed every day.</p><p>I want to make it clear that my goal will be to propose a clear and easy to understand solution for each of the exercises. By this I mean that I will not aim for time/memory optimization. At least, not for the versions that I will document the most.</p><p>If I feel like it, I will surely recode an optimal solution.</p><p>Moreover, this year <a href="https://blog.jetbrains.com/kotlin/2021/11/advent-of-code-2021-in-kotlin/">JetBrains offers to process the topics using Kotlin</a>. Great, it's been a long time since I coded in this language!</p><p>All my solutions will be available on this <a href="https://github.com/triozer/aoc-2021-in-kotlin">GitHub repo</a>. I also created a private leaderboard if you want to challenge me : <code>1663489-611b8c95</code>.</p><p>Let's have <code>fun</code> and don't hesitate to reach me on Discord <code>triozer#4242</code>!</p></div>
                                 </section>
                             </div>
                         </div>
@@ -189,32 +188,22 @@
             <div class="col-md-12">
                 <div class="footer-content">
                     <div class="row">
-                                <div class="col-md-6">
-                                    <h3>Tags</h3>
-                                    <ul class="tags">
-                                            <li>
-                                                <a href="tag/stdlib/index.html">stdlib</a>
-                                            </li>
-                                    </ul>
-                                </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-12">
-                            <p class="copyright">Copyright &copy; 2021, <a href="introduction.html">Advent of Code 2021</a>. All Right Reserved.</p>
+                            <p class="copyright">Copyright &copy; 2021, <a href="https://github.com/triozer">triozer</a>. All Right Reserved.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>    
+    </footer>
     </div>
 
     <script type="text/javascript" src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js"></script>
 
-    <script type="text/javascript" src="assets/js/libraries.js%3Fv=d8128bf8a9"></script>
+    <script type="text/javascript" src="assets/js/libraries.js%3Fv=8b82a609c0"></script>
 
-    
-    <script type="text/javascript" src="assets/js/main.js%3Fv=d8128bf8a9"></script>
+
+    <script type="text/javascript" src="assets/js/main.js%3Fv=8b82a609c0"></script>
 
     <script>
     window.addEventListener('DOMContentLoaded', (event) => {

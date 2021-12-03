@@ -2,4 +2,8 @@
 .idea
 build
 src/**/input.txt
-.ghost
+.ghost/*
+.ghost/content/themes/casper
+.ghost/content/logs
+!.ghost/content
+!.ghost/build
