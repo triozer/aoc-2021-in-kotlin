@@ -38,13 +38,13 @@ private class Grid(val cells: List<List<Cell>>) {
 }
 
 private fun resolve(input: List<String>): MutableSet<MutableMap.MutableEntry<Grid, Int>> {
-    val numberToPulled = input[0].split(",").map { it.toInt() }
+    val numberToBePulled = input[0].split(",").map { it.toInt() }
     val grids = input.subList(1, input.size)
         .filter { it.isNotBlank() }
         .windowed(5, 5)
         .map { Grid.from(it) }
 
-    return numberToPulled.fold(LinkedHashMap<Grid, Int>()) { resolvedGrids, value ->
+    return numberToBePulled.fold(LinkedHashMap<Grid, Int>()) { resolvedGrids, value ->
         run {
             grids.forEach nextGrid@{
                 if (resolvedGrids.contains(it)) {
