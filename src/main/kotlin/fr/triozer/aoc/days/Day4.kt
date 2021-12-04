@@ -44,23 +44,23 @@ private fun resolve(input: List<String>): MutableSet<MutableMap.MutableEntry<Gri
         .windowed(5, 5)
         .map { Grid.from(it) }
 
-    val resolvedGrids = LinkedHashMap<Grid, Int>()
+    return numberToPulled.fold(LinkedHashMap<Grid, Int>()) { resolvedGrids, value ->
+        run {
+            grids.forEach nextGrid@{
+                if (resolvedGrids.contains(it)) {
+                    return@nextGrid
+                }
 
-    numberToPulled.forEach { value ->
-        grids.forEach nextGrid@ {
-            if (resolvedGrids.contains(it)) {
-                return@nextGrid
+                it.check(value)
+
+                if (it.checkWin()) {
+                    resolvedGrids[it] = value
+                }
             }
 
-            it.check(value)
-
-            if (it.checkWin()) {
-                resolvedGrids[it] = value
-            }
+            return@fold resolvedGrids
         }
-    }
-
-    return resolvedGrids.entries
+    }.entries
 }
 
 private fun MutableMap.MutableEntry<Grid, Int>.score() = this.key.unmarkedSum() * this.value
