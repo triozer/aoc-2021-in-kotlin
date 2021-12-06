@@ -798,7 +798,7 @@ header h5:before{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('../img/reading-time.svg');
+    background-image: url('assets/img/reading-time.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1100,7 +1100,7 @@ header h5:before{
 }
 
 .loop .swiper-slide.loaded:not(.swiper-slide-active) .post-content .reading-time:before{
-    background-image: url(../img/reading-time-2.svg);
+    background-image: url(assets/img/reading-time-2.svg);
 }
 
 .loop .swiper-slide.loaded:not(.swiper-slide-active) .article-container:before{
@@ -1375,7 +1375,7 @@ header h5:before{
     width: 64px;
     color: #5FCCC4;
     font-size: 20px;
-    background-image: url('../img/next.svg');
+    background-image: url('assets/img/next.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 17px;
@@ -1384,7 +1384,7 @@ header h5:before{
 .gh-signin .btn:not([disabled]):not(.disabled).active,
 .gh-signin .btn:not([disabled]):not(.disabled):active,
 .gh-signin .btn:hover{
-    background-image: url('../img/next.svg');
+    background-image: url('assets/img/next.svg');
     box-shadow: none;
 }
 
