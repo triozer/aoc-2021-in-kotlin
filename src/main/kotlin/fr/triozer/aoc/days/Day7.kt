@@ -7,15 +7,13 @@ private fun minFuel(positions: List<Int>, constantRate: (n: Int) -> Int): Int {
     val min = positions.minOrNull()!!
     val max = positions.maxOrNull()!!
     return (min..max).minOfOrNull { alignPosition ->
-        positions.sumOf { position ->
-            constantRate(abs(alignPosition - position))
-        }
+        positions.sumOf { constantRate(abs(alignPosition - it)) }
     } ?: 0
 }
 
-private fun part1(input: List<Int>): Int = minFuel(input) { it }
+private fun part1(input: List<Int>) = minFuel(input) { it }
 
-private fun part2(input: List<Int>): Int = minFuel(input) { it * (it + 1) / 2 }
+private fun part2(input: List<Int>) = minFuel(input) { it * (it + 1) / 2 }
 
 /**
  * Explanation: https://triozer.github.io/aoc-2021-in-kotlin/blog/day-7
