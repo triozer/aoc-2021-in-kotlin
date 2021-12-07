@@ -1,6 +1,7 @@
 .gradle
 .idea
 build
+out
 src/**/input.txt
 _ghost/*
 _ghost/content/themes/casper

@@ -15,6 +15,11 @@ fun readInput(day: Int, name: String) = File("src/main/resources/day$day", "$nam
 fun readInputAsInt(day: Int, name: String) = readInput(day, name).map { it.toInt() }
 
 /**
+ * Read first lines from the given input txt file as a list of int
+ */
+fun readSingleLineInputAsInts(day: Int, name: String) = readInput(day, name).first().split(",").map { it.toInt() }
+
+/**
  * Converts string to md5 hash.
  */
 fun String.md5(): String =
